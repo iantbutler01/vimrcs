@@ -32,6 +32,9 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'nvie/vim-flake8'
 Plugin 'valloric/youcompleteme'
+Plugin 'dense-analysis/ale'
+Plugin 'slashmili/alchemist.vim'
+
 
 " Text objects
 Plugin 'kana/vim-textobj-user'
@@ -47,7 +50,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'b4winckler/vim-objc'
 Plugin 'file:///Users/panda/Desktop/OpenSource/csv.vim'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'exu/pgsql.vim'
 Plugin 'keith/swift.vim'
 Plugin 'othree/yajs.vim'
@@ -64,7 +67,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-jp/vim-cpp'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'scrooloose/syntastic'
 
 " UI additions
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -73,6 +75,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Color Themes Picker
 Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()                   " Finish registering plugins
 "" End Vundle
@@ -94,5 +97,5 @@ nnoremap <space> za
 " Auto completions settings
 let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader><leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-colorscheme lyla
+set background=light
+autocmd vimenter * colorscheme gruvbox
