@@ -31,9 +31,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'nvie/vim-flake8'
-Plugin 'valloric/youcompleteme'
 Plugin 'dense-analysis/ale'
-Plugin 'slashmili/alchemist.vim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " Text objects
@@ -50,7 +49,6 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'b4winckler/vim-objc'
 Plugin 'file:///Users/panda/Desktop/OpenSource/csv.vim'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'exu/pgsql.vim'
 Plugin 'keith/swift.vim'
 Plugin 'othree/yajs.vim'
@@ -64,9 +62,12 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'evanleck/vim-svelte', {'branch': 'main'}
 Plugin 'vim-jp/vim-cpp'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'elixir-editors/vim-elixir'
+
 
 " UI additions
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -93,9 +94,10 @@ let mapleader = ","
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
+set tabstop=4
+set shiftwidth=4
+
 
 " Auto completions settings
-let g:ycm_autoclose_preview_window_after_completion=1
-nnoremap <leader><leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set background=light
 autocmd vimenter * colorscheme gruvbox
