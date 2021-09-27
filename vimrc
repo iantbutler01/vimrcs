@@ -32,16 +32,19 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'nvie/vim-flake8'
 Plugin 'dense-analysis/ale'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
-
-" Text objects
+" Text objects / Text Formatting
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-indent'
 Plugin 'kana/vim-textobj-lastpat'
 Plugin 'kana/vim-textobj-line'
 Plugin 'thinca/vim-textobj-between'
+Plugin 'vim-scripts/indentpython.vim'
+
+" Intellisense
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 " Language definitions
 Plugin 'JulesWang/css.vim'
@@ -97,7 +100,18 @@ nnoremap <space> za
 set tabstop=4
 set shiftwidth=4
 
-
 " Auto completions settings
 set background=light
 autocmd vimenter * colorscheme gruvbox
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Disable auto sql complete check because dbext is not installed
+let g:omni_sql_no_default_maps = 1
