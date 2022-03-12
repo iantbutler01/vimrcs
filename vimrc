@@ -70,6 +70,8 @@ Plugin 'vim-jp/vim-cpp'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 
 
 " UI additions
@@ -99,6 +101,15 @@ set foldlevel=99
 nnoremap <space> za
 set tabstop=4
 set shiftwidth=4
+
+" Change working directory to current file and print it.
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType jsx setlocal ts=2 sts=2 sw=2
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2
+autocmd FileType tsx setlocal ts=2 sts=2 sw=2
+
 
 " Auto completions settings
 set background=light
